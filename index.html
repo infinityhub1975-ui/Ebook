@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr. and Mrs. [Redacted] | A spy romantic suspense novel</title>
+<meta name="description" content="Two enemy spies. One fake marriage. Seven days to steal the secret that could get forty-one people killed. A fake marriage, forced proximity spy romance.">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Mr. and Mrs. [Redacted]: a spy romantic suspense novel">
+<meta property="og:description" content="Two enemy spies. One fake marriage. One bed. Seven days on Lake Como.">
+<!-- Replace with your real GitHub Pages address after you publish -->
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1624;
+  --ink-2:#15233a;
+  --lake:#6f8fb5;
+  --paper:#e9edf2;
+  --paper-ink:#1a2233;
+  --oxblood:#a3263b;
+  --brass:#d2ab55;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Libre Franklin", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:1.0625rem;line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{width:min(1120px,92vw);margin-inline:auto}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100svh;display:grid;align-items:center;padding:clamp(2rem,6vw,5rem) 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(3rem,7vw,6rem);line-height:.92;margin:0 0 1.4rem;letter-spacing:-.01em}
+.hero h1 .line{display:block;white-space:nowrap}
+.hero .lede{font-size:clamp(1.15rem,2vw,1.4rem);max-width:30ch;color:#cdd7e4;margin:0 0 2rem}
+.hero .hint{font-size:.95rem;color:var(--lake);margin:1.1rem 0 0}
+.cover{justify-self:center;width:min(100%,380px)}
+.cover img{border-radius:3px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+
+/* redaction bars */
+.redact{font:inherit;color:inherit;border:0;cursor:pointer;padding:0 .12em;background:#000;color:#000;border-radius:2px;transition:background .5s ease,color .5s ease}
+.redact:hover{background:#1c1c1c}
+.redact[aria-pressed="true"]{background:transparent;color:var(--brass);cursor:default}
+.hero h1 .redact{font-family:var(--serif);font-weight:700;font-size:inherit;line-height:inherit;padding:0 .08em}
+.paper .redact[aria-pressed="true"]{color:var(--oxblood)}
+
+/* buttons */
+.btn{display:inline-block;background:var(--oxblood);color:#fff;text-decoration:none;font-weight:600;padding:.95rem 1.7rem;border-radius:3px;transition:background .2s}
+.btn:hover{background:#bb3047}
+.btn.ghost{background:transparent;border:1.5px solid var(--lake);color:var(--paper);margin-left:.6rem}
+.btn.ghost:hover{background:rgba(111,143,181,.15)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem .2rem}
+
+/* ---------- Paper sections ---------- */
+.paper{background:var(--paper);color:var(--paper-ink)}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.05;margin:0 0 1.5rem}
+.blurb .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,5rem)}
+.blurb p{margin:0 0 1.2rem;max-width:58ch}
+.blurb p.big{font-family:var(--serif);font-size:1.55rem;line-height:1.35;font-weight:500}
+.blurb .small{font-size:.95rem;color:#4c576b}
+
+/* tropes */
+.tropes h2{max-width:22ch}
+.trope{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:1rem 3rem;padding:1.6rem 0;border-top:1px solid rgba(233,237,242,.22)}
+.trope:last-child{border-bottom:1px solid rgba(233,237,242,.22)}
+.trope h3{font-family:var(--serif);font-size:1.9rem;line-height:1.1;margin:0;font-weight:700}
+.trope p{margin:0;color:#cdd7e4;max-width:56ch}
+
+/* dossier */
+.dossier{background:var(--ink-2)}
+.files{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.file{border-left:4px solid var(--oxblood);padding:.2rem 0 .2rem 1.4rem}
+.file.b{border-left-color:var(--brass)}
+.file h3{font-family:var(--serif);font-size:2.2rem;margin:0;line-height:1}
+.file .agency{color:var(--lake);margin:.3rem 0 1.1rem}
+.file dl{margin:0}
+.file dt{font-weight:600;margin-top:.8rem}
+.file dd{margin:0;color:#cdd7e4}
+.cover-names{margin-top:2.5rem;color:#cdd7e4;max-width:60ch}
+
+/* excerpt */
+.excerpt .wrap{max-width:760px}
+blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,1.75rem);line-height:1.45;font-weight:500}
+blockquote p{margin:0 0 .8rem}
+.source{font-size:.95rem;color:#4c576b;margin-top:1.5rem}
+
+/* buy */
+.buy{text-align:center}
+.buy .wrap{max-width:640px}
+.buy h2{margin-inline:auto}
+.price{font-family:var(--serif);font-size:3.4rem;font-weight:700;line-height:1;margin:.5rem 0 .4rem}
+.buy p{margin:0 auto 1.4rem;color:#cdd7e4}
+.buy .note{font-size:.95rem;color:var(--lake);margin-top:1.4rem}
+.buy .btn{font-size:1.1rem;padding:1.1rem 2.2rem}
+
+footer{padding:2rem 0 3rem;color:var(--lake);font-size:.95rem;text-align:center;border-top:1px solid rgba(233,237,242,.12)}
+
+/* ---------- Small screens ---------- */
+@media (max-width:820px){
+  .hero{min-height:auto}
+  .hero .wrap,.blurb .wrap,.files{grid-template-columns:1fr}
+  .cover{order:-1;width:min(70%,300px)}
+  .trope{grid-template-columns:1fr}
+  .btn.ghost{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .redact,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>
+        <span class="line">Mr. and Mrs.</span>
+        <span class="line"><button class="redact" type="button" aria-pressed="false" aria-label="Redacted word. Press to reveal." data-reveal="Hale">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></span>
+      </h1>
+      <p class="lede">Two enemy spies. One fake marriage. Seven days to steal the secret that could get forty-one people killed.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://YOUR-USERNAME.gumroad.com/l/YOUR-PRODUCT">Get the ebook</a>
+        <a class="btn ghost" href="#excerpt">Read a sample</a>
+      </div>
+      <p class="hint">Press the black bar to see the name on the hotel register.</p>
+    </div>
+    <div class="cover">
+      <img src="cover.png" width="1600" height="2560" alt="Book cover for Mr. and Mrs. [Redacted], a spy romantic suspense novel, with black redaction bars across the middle.">
+    </div>
+  </div>
+</header>
+
+<section class="paper blurb" id="about">
+  <div class="wrap">
+    <h2>Three years ago, she shot him.</h2>
+    <div>
+      <p class="big">Nora Quinn is Halcyon's coldest operative. Cole Mercer is Meridian's most charming liar. In Istanbul, she put a bullet in his shoulder. He kept it.</p>
+      <p>Now their rival agencies need one impossible thing: a married couple. At a dying broker's villa on Lake Como, they must pose as Mr. and Mrs. Hale and steal the Lantern List, the names of <button class="redact" type="button" aria-pressed="false" aria-label="Redacted. Press to reveal." data-reveal="forty-one">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> sleeper agents who will die if it ever goes on sale.</p>
+      <p>The cover story is easy. The rules are easier: don't touch, don't improvise, don't fall in love. But the villa has no locks on its doors, the host can read a lie in a husband's glance, and there is only one bed.</p>
+      <p>And on the last morning, both of them get the same order: <button class="redact" type="button" aria-pressed="false" aria-label="Redacted. Press to reveal." data-reveal="kill the other">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>.</p>
+      <p class="small">Slow burn, banter, a very large dog, and a happy ending. Kisses and one tasteful fade-to-black scene; nothing explicit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tropes">
+  <div class="wrap">
+    <h2>What you're signing up for</h2>
+    <div class="trope">
+      <h3>Fake marriage</h3>
+      <p>Six years of invented history, a wedding story they have to tell in front of twelve strangers, and a ring that fits far too well.</p>
+    </div>
+    <div class="trope">
+      <h3>Forced proximity</h3>
+      <p>One suite. One enormous bed. No locks on any door. A fortress of pillows that does not survive the week.</p>
+    </div>
+    <div class="trope">
+      <h3>Enemies to lovers</h3>
+      <p>They know exactly how the other fights. They are about to learn how the other takes their coffee, and what they're afraid of at three in the morning.</p>
+    </div>
+    <div class="trope">
+      <h3>Danger</h3>
+      <p>A vault under the library, a staged ambush on the lake, a traitor with a very good watch, and orders neither of them can live with.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dossier" id="characters">
+  <div class="wrap">
+    <h2>The file on Mr. and Mrs. Hale</h2>
+    <div class="files">
+      <article class="file">
+        <h3>Nora Quinn</h3>
+        <p class="agency">Halcyon Group. Code name Vesper.</p>
+        <dl>
+          <dt>Known for</dt><dd>Reading a room from the doorway, and never missing the exits.</dd>
+          <dt>Cover</dt><dd>Elise Hale, charitable foundation director, devoted wife.</dd>
+          <dt>Weakness</dt><dd>One man. She'd rather not discuss it.</dd>
+        </dl>
+      </article>
+      <article class="file b">
+        <h3>Cole Mercer</h3>
+        <p class="agency">Meridian Bureau. Code name Cassian.</p>
+        <dl>
+          <dt>Known for</dt><dd>A smile that has talked him out of three borders and one felony.</dd>
+          <dt>Cover</dt><dd>Adrian Hale, collector, adoring husband.</dd>
+          <dt>Weakness</dt><dd>He still has the bullet.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="paper excerpt" id="excerpt">
+  <div class="wrap">
+    <h2>A sample from chapter one</h2>
+    <blockquote>
+      <p>"You were civil in Istanbul, too," Nora said. "Right before you got in my way."</p>
+      <p>"And you were gracious in Istanbul. Right before you shot me."</p>
+      <p>"In the shoulder."</p>
+      <p>"Three centimeters from my heart."</p>
+      <p>"I was aiming for the shoulder."</p>
+    </blockquote>
+    <p class="source">From <em>Mr. and Mrs. [Redacted]</em>, chapter 1: The Worst Idea in the History of Espionage.</p>
+  </div>
+</section>
+
+<section class="buy" id="buy">
+  <div class="wrap">
+    <h2>Start the mission</h2>
+    <div class="price">$5.99</div>
+    <p>About 40,000 words, 34 chapters and an epilogue. PDF, instant download.</p>
+    <a class="btn" href="https://YOUR-USERNAME.gumroad.com/l/YOUR-PRODUCT">Get the ebook on Gumroad</a>
+    <p class="note">Checkout and delivery are handled by Gumroad.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Your Name. This is a work of fiction.</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.redact').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.getAttribute('aria-pressed') === 'true') return;
+      btn.textContent = btn.dataset.reveal;
+      btn.setAttribute('aria-pressed', 'true');
+      btn.setAttribute('aria-label', btn.dataset.reveal);
+    });
+  });
+</script>
+</body>
+</html>
